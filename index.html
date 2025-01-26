@@ -1,13 +1,93 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Kalkulator BMI
-        </title>
-        <link rel="stylesheet" href="styles.css"
-    </head>
-    <body>
-        <p>
-            Misalkan kita punya hal seperti ini
-        </p>
-    </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title> <!-- Title untuk tab website di browser-->
+    <link rel="stylesheet" href="css\styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>BMI Calculator</h1>
+    </header>
+
+    <main>
+        <!-- Left Content -->
+        <section>
+        <!-- Introduction to the website -->
+        <article>
+            <p>
+                BMI, developed by Adolphe Quetelet in the 19th century, is a tool used to categorize weight as underweight, ideal, overweight, or obese, serving as a screening method for health risks. An abnormal BMI, as noted by WHO, increases the likelihood of health issues such as cardiovascular diseases, hypertension, diabetes, and premature death. Understanding and monitoring BMI is crucial to maintaining a healthy weight and minimizing the risk of related health complications. How about you? Let's calculate now using the BMI Calculator!
+            </p>
+        </article>
+        
+        <!-- Form for the calculator input -->
+        <form>
+            <div>
+                <label for="gender-input">Gender</label><br>
+                <input type="radio" name="gender-input" value="male">Male<br>
+                <input type="radio" name="gender-input" value="female">Female
+            </div>
+            <div class="form-group">
+                <label for="age-input">Age</label>
+                <input type="number" id="age-input">
+            </div>
+
+            <div class="form-group">
+                <label for="body-height-input">Height (cm)</label>
+                <input type="number" id="body-height-input">
+            </div>
+
+            <div class="form-group">
+                <label for="body-weight-input">Body Weight (kg)</label>
+                <input type="number" id="body-weight-input">
+            </div>
+
+            <!-- Buttons for calculating and reset input -->
+            <div>
+                <button>Calculate</button>
+                <button>Reset</button>
+            </div>
+        </form>
+
+        <!-- Feature Information -->
+        <article>
+            <header>
+                <h2>Features:</h2>
+            </header>
+            <ol type="1">
+                <li>Calculating the BMI value.</li>
+                <li>Determining whether the weight category is ideal or not.</li>
+            </ol>
+            <p>This calculator is intended for use by adults only (pregnant or breastfeeding women should not rely on this BMI reading), and no action should be taken based on its value other than consulting a qualified individual such as a doctor.</p>
+            <p>The calculator will provide you with an overview of how your weight compares to general values. Body Mass Index (or BMI) is calculated as your weight (in kilograms) divided by the square of your height (in meters), or BMI = Kg/M².</p>
+        </article>
+        </section>
+
+        <section>
+            <header>
+                <h2>Results</h2>
+            </header>
+        
+            <section>
+                <span id="bmi-result">0</span>
+            </section>
+
+            <article>
+                <p id="right-article">
+                    Jadi disini hasilnya bakal kayak gini aja wkwkkw terus gimana dong yahhhhwadijowadiaowdjawoidjawoijedawijdawiodjawiodjawoijdawoijdawoijdoawijdioawjdoaiwjdoawijdioawjdoiawjdioawjdoaiwjdaowijdawoijdioawjdioawjdioawjdioawjdoiajdioawjdoaiwjdioawjdioawjdoiawjdioawjdioawdjioajdioawjdoiajdoiawjdioawjdoiawjdoiawjdiowajdoiawjdoiajoidjawoidjawoijdoaiwjdoaijdklsajdlkajwdldjawldjawldjadjawoidjaojdaosijdoiadjawojdoaiwjdawoidjaowidjaoidjaskljdakljdwaiodjaslkdjalidjwaoidjaoidjoawjdo
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <span>
+            Made by Ren.
+        </span>
+    </footer>
+</body>
+
+</html>

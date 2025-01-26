@@ -1,0 +1,28 @@
+html {
+    color: aliceblue;
+    font-family: Lexend Deca, sans-serif;
+    background-color: lightslategray;
+}
+
+main {
+    display: flex;
+    gap: 50px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+#bmi-result {
+    font-size: xx-large;
+}
+
+#right-article {
+    word-break: break-all;
+}
+
+ol {
+    padding-left: 17px;
+}
+
