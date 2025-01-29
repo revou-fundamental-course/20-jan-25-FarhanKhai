@@ -1,28 +1,154 @@
-html {
-    color: aliceblue;
-    font-family: Lexend Deca, sans-serif;
-    background-color: lightslategray;
+body {
+    color: #4b3a5f;
+    font-family: "Plus Jakarta Sans", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #9B7EBD;
+    text-align: justify;
+    margin: 0;
 }
 
 main {
     display: flex;
-    gap: 50px;
+    gap: 10px;
+}
+
+.website-header {
+    background-color: #3B1E54;
+
+    display: flex;
+}
+
+.website-logo {
+    width: 250px;
+    height: 125px;
+    padding-left: 1%;
+}
+
+section {
+    width: 50%;
+}
+
+.left-section{
+    background-color: #D4BEE4;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 20px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
+}
+
+.right-section {
+    background-color: #D4BEE4;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 40px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* 3D Effect */
+}
+
+h2 {
+    color: #3B1E54;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
+    background-color: unset;
 }
+
+.form-field{
+    display:flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    gap: 10px;
+    align-content: center;
+}
+
+label {
+    text-align: center;
+    color: #3B1E54;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    text-align: center;
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #8174A0;
+    color: #8174A0;
+    outline: none;
+    background: transparent;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-bottom: 2px solid #3B1E54;
+}
+
+/* Gender Selection Container */
+.gender-selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Hide default radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Style labels to look like buttons */
+.gender-label {
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Male selected */
+input[type="radio"]:checked#male-input + label {
+    color: #3b2da5;
+    background-color: #899fff;
+    border-radius: 50%;
+}
+
+/* Female selected */
+input[type="radio"]:checked#female-input + label {
+    color: rgb(253, 98, 124);
+    background-color: pink;
+    border-radius: 50%;
+}
+
 
 #bmi-result {
     font-size: xx-large;
-}
-
-#right-article {
-    word-break: break-all;
+    text-align: center;
 }
 
 ol {
     padding-left: 17px;
+}
+
+footer {
+    padding-top: 2%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2%;
 }
 
