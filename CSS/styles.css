@@ -1,3 +1,4 @@
+/* Global styles for the body */
 body {
     color: #4b3a5f;
     font-family: "Plus Jakarta Sans", serif;
@@ -8,79 +9,131 @@ body {
     margin: 0;
 }
 
+/* Main container, using flexbox to manage layout */
 main {
     display: flex;
-    gap: 10px;
+    gap: 10px; /* Space between sections */
 }
 
+/* Header styles */
 .website-header {
-    background-color: #3B1E54;
-
-    display: flex;
+    background-color: #3B1E54; /* Dark background for the header */
+    display: flex; /* Flex to span the whole header */
 }
 
+/* Logo styles */
 .website-logo {
     width: 250px;
     height: 125px;
     padding-left: 1%;
 }
 
+/* Section layout: each section takes half the screen */
 section {
     width: 50%;
 }
 
-.left-section{
-    background-color: #D4BEE4;
+/* Left section styling */
+.left-section {
+    background-color: #D4BEE4; /* Soft lavender background */
     margin-top: 20px;
     margin-left: 40px;
     margin-right: 20px;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* 3D shadow effect */
 }
 
+/* Right section styling */
 .right-section {
-    background-color: #D4BEE4;
+    background-color: #D4BEE4; /* Soft lavender background */
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 40px;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* 3D Effect */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* 3D shadow effect */
 }
 
+/* Header style for h2 */
 h2 {
     color: #3B1E54;
 }
 
+/* General form styles */
 form {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stacking form elements */
     align-items: center;
-    gap: 20px;
+    gap: 20px; /* Space between form fields */
 }
 
+/* Grouping form elements */
 .form-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    background-color: unset;
 }
 
-.form-field{
-    display:flex;
+/* Gender selection layout */
+.gender-selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px; /* Space between gender labels */
+}
+
+/* Hide the default radio button UI */
+input[type="radio"] {
+    display: none;
+}
+
+/* Custom label styles for gender selection */
+.gender-label {
+    padding: 10px 15px;
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for gender labels */
+.gender-label:hover {
+    transform: scale(1.1);
+}
+
+/* Styles when Male option is selected */
+input[type="radio"]:checked#male-input + label {
+    color: #3b2da5;
+    background-color: #899fff;
+    transform: scale(1.25);
+}
+
+/* Styles when Female option is selected */
+input[type="radio"]:checked#female-input + label {
+    color: rgb(253, 98, 124);
+    background-color: pink;
+    transform: scale(1.25);
+}
+
+/* Form field styles for better alignment */
+.form-field {
+    display: flex;
     flex-direction: column;
     padding: 20px 30px;
     gap: 10px;
     align-content: center;
 }
 
+/* Label styles */
 label {
     text-align: center;
     color: #3B1E54;
     font-weight: bold;
 }
 
+/* Number input styles */
 input[type="number"] {
     text-align: center;
     width: 100%;
@@ -94,57 +147,52 @@ input[type="number"] {
     transition: border-color 0.3s ease;
 }
 
+/* Focused input styles */
 input[type="number"]:focus {
     border-bottom: 2px solid #3B1E54;
 }
 
-/* Gender Selection Container */
-.gender-selection {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
+/* Remove the number input arrows (spin buttons) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-/* Hide default radio buttons */
-input[type="radio"] {
-    display: none;
-}
-
-/* Style labels to look like buttons */
-.gender-label {
-    padding: 10px 15px;
-    font-size: 18px;
-    border-radius: 5px;
+/* Calculate button styles */
+#calculate-button {
+    background-color: #3B1E54;
+    color: #EEEEEE;
+    width: 140px;
+    height: 50px;
+    padding: 10px 20px;
+    border-radius: 30px; /* Rounded button */
+    border: none;
+    font-size: 1.2rem;
     cursor: pointer;
-    color: white;
-    transition: 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Male selected */
-input[type="radio"]:checked#male-input + label {
-    color: #3b2da5;
-    background-color: #899fff;
-    border-radius: 50%;
+/* Hover effect on calculate button */
+#calculate-button:hover {
+    background-color: #5A2D76;
+    transform: scale(1.05); /* Slight scaling effect on hover */
 }
 
-/* Female selected */
-input[type="radio"]:checked#female-input + label {
-    color: rgb(253, 98, 124);
-    background-color: pink;
-    border-radius: 50%;
-}
-
-
+/* Result area styling */
 #bmi-result {
     font-size: xx-large;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Ordered list styling */
 ol {
     padding-left: 17px;
 }
 
+/* Footer styling */
 footer {
     padding-top: 2%;
     display: flex;
@@ -152,3 +200,71 @@ footer {
     padding-bottom: 2%;
 }
 
+/* Mobile responsiveness styles */
+@media screen and (max-width: 480px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    /* Section styles for mobile */
+    section {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        margin: 0 auto;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    /* Resize the logo */
+    .website-logo {
+        width: 150px;
+        height: auto;
+    }
+
+    /* Adjust form field padding for mobile */
+    .form-field {
+        padding: 10px;
+    }
+
+    /* Number input font size and width */
+    input[type="number"] {
+        font-size: 1rem;
+        padding: 10px;
+        width: 100%;
+    }
+
+    /* Adjust the gender selection layout */
+    .gender-selection {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px; /* Adjust spacing for mobile */
+        width: 100%;
+    }
+
+    .gender-label {
+        font-size: 18px;
+        padding: 6px 10px;
+    }
+
+    /* Make the button responsive */
+    #calculate-button {
+        width: 100%;
+        max-width: 180px;
+    }
+
+    /* Adjust the result font size */
+    #bmi-result {
+        font-size: large;
+    }
+}
