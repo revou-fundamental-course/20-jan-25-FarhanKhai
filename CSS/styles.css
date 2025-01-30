@@ -12,7 +12,9 @@ body {
 /* Main container, using flexbox to manage layout */
 main {
     display: flex;
-    gap: 10px; /* Space between sections */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    gap: 40px; /* Space between sections */
 }
 
 /* Header styles */
@@ -30,26 +32,28 @@ main {
 
 /* Section layout: each section takes half the screen */
 section {
-    width: 50%;
+    width: 80%;
 }
 
-/* Left section styling */
-.left-section {
+
+/* ALL TOP SECTION STYLING */
+.top-section {
     background-color: #D4BEE4; /* Soft lavender background */
     margin-top: 20px;
-    margin-left: 40px;
-    margin-right: 20px;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* 3D shadow effect */
 }
 
-/* Right section styling */
-.right-section {
+/* Ordered list styling */
+ol {
+    padding-left: 17px;
+}
+
+
+/* ALL BOTTOM SECTION STYLING */
+.bottom-section {
     background-color: #D4BEE4; /* Soft lavender background */
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 40px;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* 3D shadow effect */
@@ -60,6 +64,19 @@ h2 {
     color: #3B1E54;
 }
 
+/* Header style for h6 or risk-title */
+#risk-title {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+/* result text styles */
+#result-text {
+    font-weight: bold;
+}
+
+
+/* FORM */
 /* General form styles */
 form {
     display: flex;
@@ -189,18 +206,23 @@ input[type="number"]::-webkit-outer-spin-button {
     align-items: center;
 }
 
-/* Ordered list styling */
-ol {
-    padding-left: 17px;
-}
 
-/* Footer styling */
+/* FOOTER STYLING */
 footer {
     padding-top: 2%;
     display: flex;
     justify-content: center;
     padding-bottom: 2%;
 }
+
+
+/* ERROR MESSAGE STYLING */
+.error-message {
+    text-align: center;
+    font-size: 13px;
+    color: maroon;
+}
+
 
 /* Mobile responsiveness styles */
 @media screen and (max-width: 480px) {
@@ -219,8 +241,8 @@ footer {
         box-sizing: border-box;
     }
 
-    .left-section,
-    .right-section {
+    .top-section,
+    .bottom-section {
         width: 100%;
         margin: 0 auto;
         padding: 15px;

@@ -3,10 +3,10 @@
 
 
 const BMI_CATEGORIES = {
-    UNDERWEIGHT: 'Berat badan kurang',
-    NORMAL: 'Normal (ideal)',
-    OVERWEIGHT: 'Berat badan berlebih',
-    OBESITY: 'Kegemukan (Obesitas)',
+    UNDERWEIGHT: 'underweight',
+    NORMAL: 'normal (ideal)',
+    OVERWEIGHT: 'overweight',
+    OBESITY: 'obese',
 };
 
 // Fungsi untuk menghitung BMI berdasarkan tinggi dan berat badan.
@@ -22,8 +22,8 @@ const validateInput = (weight, height, age, gender) => {
 
     // Mengambil elemen error message untuk masing-masing input
     const genderErrorMessage = document.getElementById('gender-error-message');
-    const weightErrorMessage = document.getElementById('weight-error-message');
     const ageErrorMessage = document.getElementById('age-error-message');
+    const weightErrorMessage = document.getElementById('weight-error-message');
     const heightErrorMessage = document.getElementById('height-error-message');
 
     // Reset pesan error sebelumnya
@@ -34,12 +34,14 @@ const validateInput = (weight, height, age, gender) => {
 
     // Validate age
     if (isNaN(age) || age <= 0) {
-        ageErrorMessage.innerText = 'Age must be filled and must be more than 0'
+        ageErrorMessage.innerText = 'Age must be filled and must be more than 0';
+        isValid = false;
     }
 
     // Validate height
     if (isNaN(height) || height <= 0) {
-        heightErrorMessage.innerText = 'Height must be filled and must be more than 0'
+        heightErrorMessage.innerText = 'Height must be filled and must be more than 0';
+        isValid = false;
     }
 
     // Validate body weight
@@ -144,7 +146,7 @@ const generateDisplay = (bmi, status) => {
     adviceText.innerText = getAdviceText(status);
 
     const riskTitle = document.getElementById('risk-title')
-    riskTitle.innerText = `Several disease risks that originate from the body ${status}`;
+    riskTitle.innerText = `Several disease risks that originate from the ${status} body range`;
 
     const riskList = document.getElementById('list-risk');
     riskList.innerHTML = '';
