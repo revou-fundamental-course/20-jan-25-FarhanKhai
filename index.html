@@ -13,7 +13,7 @@
 
 <body>
     <header class="website-header">
-            <img class="website-logo" src="assets\KalkulatorLogo.png" alt="Kalkulator BMI">
+            <img class="website-logo" src="assets\KalkulatorLogo.png" alt="Kalkulator BMI Logo">
     </header>
 
     <main>
@@ -39,57 +39,72 @@
                 <input type="radio" id="female-input" name="gender-input" value="female">
                 <label for="female-input" class="gender-label">♀</label>
             </div>
-    
+            <span id="gender-error-message" class="error-message"></span> 
 
             <div class="form-group">
                 <div class="form-field">
                     <label for="age-input">Age</label>
                     <input type="number" id="age-input">
                 </div>
+                <span id="age-error-message" class="error-message"></span>
 
                 <div class="form-field">
                     <label for="body-height-input">Height (cm)</label>
-                    <input type="number" id="body-height-input">
+                    <input type="number" id="height-input">
                 </div>
+                <span id="height-error-message" class="error-message"></span>
 
                 <div class="form-field">
                     <label for="body-weight-input">Body Weight (kg)</label>
-                    <input type="number" id="body-weight-input">
+                    <input type="number" id="weight-input">
                 </div>
+                <span id="weight-error-message" class="error-message"></span>
 
             </div>
            <!-- Buttons for calculating and reset input -->
         <div>
-            <button id="calculate-button">Calculate</button>
+            <button type="button" id="calculate-button">Calculate</button>
         </div>
 
         </form>
 
         <!-- Feature Information -->
         <article>
-            <header>
-                <h2>Features:</h2>
-            </header>
+            <h2>Features:</h2>
             <ol type="1">
                 <li>Calculating the BMI value.</li>
                 <li>Determining whether the weight category is ideal or not.</li>
             </ol>
-            <p>This calculator is intended for use by adults only (pregnant or breastfeeding women should not rely on this BMI reading), and no action should be taken based on its value other than consulting a qualified individual such as a doctor.</p>
-            <p>The calculator will provide you with an overview of how your weight compares to general values. Body Mass Index (or BMI) is calculated as your weight (in kilograms) divided by the square of your height (in meters), or BMI = Kg/M².</p>
+            <p>
+                This calculator is intended for use by adults only (pregnant or breastfeeding women should not rely on this BMI reading), and no action should be taken based on its value other than consulting a qualified individual such as a doctor.
+            </p>
+            <p>
+                The calculator will provide you with an overview of how your weight compares to general values. Body Mass Index (or BMI) is calculated as your weight (in kilograms) divided by the square of your height (in meters), or BMI = Kg/M².
+            </p>
         </article>
         </section>
 
         <!-- Right Content -->
         <section class="right-section">
-            <header>
-                <h2>BMI Result</h2>
-            </header>        
-                <span id="bmi-result">0</span>
-            <article>
-                <p class="right-article">
-                    In this ten-day short course, you'll learn all about becoming a software engineer, including the career path possibilities. We'll also give you the opportunity to practice the main responsibilities of a software engineer as well!
-                </p>
-            </article>
+            <h2>BMI Result</h2>
+
+            <!-- For the JS result -->
+            <h3 id="result-category" class="result-category"></h3>
+            <div id="bmi-result" class="bmi-result"></div>
+            <p id="result-desc" class="result-desc"></p>
+            
+            <!-- Result Paragraph -->
+            <div class="paragraph-result">
+                <p id="result-text"></p>
+                <p id="suggestion-text"></p>
+                <p id="advice-text"></p>
+            </div>
+
+            <!-- Risk -->
+             <div class="risk-result">
+                <h6 id="risk-title"></h6>
+                <ul id="list-risk" class="list-risk"></ul>
+             </div>
         </section>
     </main>
 
@@ -98,6 +113,7 @@
             Made by Ren.
         </span>
     </footer>
+    <script src="js\script.js" defer></script>
 </body>
 
 </html>
