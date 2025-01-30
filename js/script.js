@@ -104,7 +104,7 @@ const getSuggestionText = (status) => {
 // Fungsi untuk mendapatkan teks saran gizi berdasarkan status BMI
 const getAdviceText = (status) => {
     if (status === BMI_CATEGORIES.UNDERWEIGHT) {
-        return 'Improve your nutritional intake with nutritious food and consult a dotor to achieve ideal body weight.';
+        return 'Improve your nutritional intake with nutritious food and consult a doctor to achieve ideal body weight.';
     } else if ( status === BMI_CATEGORIES.NORMAL) {
         return 'Maintain a healthy lifestyle by maintaining a balanced diet and exercising regularly.';
     } else if (status === BMI_CATEGORIES.OVERWEIGHT) {
